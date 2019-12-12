@@ -1,0 +1,32 @@
+.menu-nav{
+  display: flex;
+  width: 100%;
+  height: 35px;
+  background: linear-gradient(to right, #0f40c9, #0346ff8a);
+  justify-content: flex-end;
+  align-items: center;
+}
+.menu-nav ul li{
+  display: inline;
+  padding: 5px;
+}
+.menu-nav ul li a{
+  text-decoration: none;
+  font-size: 18px;
+  color: #ddd;
+}
+.menu-nav ul li a:hover{
+  color: #fff;
+}
+.menu-nav h2{
+  margin-left: 25px;
+  color: rgb(255, 154, 71);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+}
+.menu-nav a{
+  text-decoration: none;
+}
+.menu-nav h2:hover{
+  color: rgb(250, 188, 137);
+}

@@ -1,0 +1,76 @@
+.loto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+}
+.loto form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2px;
+}
+.loto form hr{
+  width: 600px;
+}
+.loto form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.loto form select {
+  margin-top: 3px;
+  color: #fff;
+  background: rgba(66, 66, 226, 0.541);
+  border-radius: 12px;
+}
+.loto h1{
+   background: rgba(161, 1, 167, 0.5);
+   width: 100%;
+   color: #fff;
+   height: 65px;
+}
+.escolha-loto{
+  display: flex;
+  flex-direction: row;
+  margin-left: 2rem;
+  flex-wrap: wrap;
+  width: 280px;
+  margin-top: 25px;
+}
+.escolha-loto li{
+  list-style: none;
+  padding: 2px;
+}
+
+.escolha-loto .selecionado {
+  background: rgba(161, 1, 167, 0.5);
+}
+.escolha-loto .selecionado:hover{
+  background: rgba(73, 116, 117, 0.5);
+}
+.escolha-loto button{
+  border: none;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  width: 45px;
+  height: 40px;
+  background: rgba(73, 116, 117, 0.5);
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.escolha-loto button:hover{ 
+  background: rgba(161, 1, 167, 0.5);
+  cursor: pointer;
+}
+.escolha-loto li a{
+  text-decoration: none;
+}

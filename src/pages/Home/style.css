@@ -1,0 +1,49 @@
+.jogos{
+  display: flex;
+  float: right;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 255, 0.267);
+  border-radius: 8px;
+  margin-right: 50px;
+  width: 240px;
+  max-width: 240px;
+  overflow: hidden;
+  padding: 5px;
+}
+.jogos button{
+  font-size: 18px;
+  background-color: rgb(248, 140, 51);
+  color: #fff;
+  width: 190px;
+}
+.jogos button:hover{
+  background-color: rgb(240, 109, 2);
+  cursor: pointer;
+}
+.jogos select{
+  background: rgba(4, 4, 199, 0.61);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+}
+.jogos select option{
+  background: #fff;
+  color: #000;
+
+}
+.home-usuario h1{
+  text-align: center;
+}
+.jogos form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;  
+}
+.jogos form button{
+  margin-top: 5px
+}
+

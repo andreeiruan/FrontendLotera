@@ -1,0 +1,64 @@
+.mega{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+}
+.mega h1{
+  background: rgba(22, 202, 22, 0.856);
+  width: 100%;
+  height: 65px;
+  color: #fff;
+}
+.mega form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mega form hr{
+  width: 600px;
+}
+.mega form label{
+  margin-top: 10px;
+  font-weight: bold;
+}
+.mega form select{
+  margin-top: 3px;
+  color: #fff;
+  background: rgba(66, 66, 226, 0.541);
+  border-radius: 12px;
+}
+.escolha-mega{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 500px;
+  margin-top: 25px;
+}
+.escolha-mega li{
+  list-style: none;
+  padding: 2px;
+}
+.escolha-mega li button{
+  width: 45px;
+  height: 40px;
+  border-radius: 18px;
+  border: 1px;
+  background: rgba(73, 116, 117, 0.5);
+  color: #fff;
+}
+
+.escolha-mega li button:hover{
+  background: rgba(22, 202, 22, 0.856);
+  cursor: pointer;
+}
+
+.escolha-mega .selecionado-mega{
+  background: rgba(22, 202, 22, 0.856);
+}
+.escolha-mega .selecionado-mega:hover{
+  background: rgba(73, 116, 117, 0.5);  
+}

@@ -1,0 +1,63 @@
+.quina{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+}
+.quina h1{
+  background: blue;
+  width: 100%;
+  height: 65px;
+  color: #fff
+}
+.quina form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.quina form hr{
+  width: 600px;
+}
+.quina form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.quina form select {
+  margin-top: 3px;
+  color: #fff;
+  background: rgba(66, 66, 226, 0.541);
+  border-radius: 12px;
+}
+.escolha-quina{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 500px;
+  margin-top: 25px;
+}
+.escolha-quina li{
+  list-style: none;
+  padding: 2px;
+}
+.escolha-quina li button{
+  width: 45px;
+  height: 40px;
+  border-radius: 18px;
+  border: 1px;
+  background: rgba(73, 116, 117, 0.5);
+  color: #fff;
+}
+.escolha-quina li button:hover{
+  background: blue;
+  cursor: pointer;
+}
+.escolha-quina .selecionado-quina{
+  background: blue;
+}
+.escolha-quina .selecionado-quina:hover{
+  background: rgba(73, 116, 117, 0.5);
+}

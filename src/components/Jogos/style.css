@@ -1,0 +1,37 @@
+.container-jogo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  background: #fff;
+  width: 200px;
+}
+.container-jogo h3{
+  text-align: center;
+  color: #fff;
+}
+.container-jogo ul li{
+  list-style: none;
+  color: #000;
+}
+.container-jogo ul li p{
+  text-align: center;
+  padding: 5px;
+}
+.mega h3{
+  background: rgb(0, 194, 0);
+  width: 100%;
+}
+.loto h3{
+  background: rgb(155, 1, 160);
+  width: 100%;
+  margin-left: 0px;
+}
+.quina h3{
+  background: blue;
+  width: 100%;
+}
+.container-jogo ul li{
+  display: flex;
+  flex-direction: column;
+}
