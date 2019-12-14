@@ -19,6 +19,7 @@ export default class Menu extends Component{
   renderOpcoes(){
     return this.state.auth ? (
       <ul>
+        
         <li><a onClick={this.sair} href="/">Sair</a></li>
       </ul>
     ) : (<ul>

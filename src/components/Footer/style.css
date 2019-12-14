@@ -1,15 +1,27 @@
-.rodape{
-  position: relative;
+.fim{
+  display: block;
   bottom: 0;
-  left: 0;
+}
+.rodape{
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  background-color: rgb(252, 145, 57);
   width: 100%;
-  background-color: rgb(240, 109, 2);
-  height: 25px;
+  height: 65px;
 }
 .rodape span{
   margin-right: 6%;
+  margin-left: 25px;
   color: #FFF;
+}
+.redes{
+  width: 150px;
+  height: 25px;
+  margin-right: 10px;
+  background: rgb(121, 121, 250);
+  border-radius: 12px;
+}
+.redes a{
+  text-decoration: none;
+  color: #fff;
 }

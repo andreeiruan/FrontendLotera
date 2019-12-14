@@ -1,8 +1,8 @@
 .menu-nav{
   display: flex;
   width: 100%;
-  height: 35px;
-  background: linear-gradient(to right, #0f40c9, #0346ff8a);
+  height: 55px;
+  background: linear-gradient(to right, #385091, #6484df8a);
   justify-content: flex-end;
   align-items: center;
 }

@@ -7,6 +7,7 @@
   background-color: rgba(0, 0, 255, 0.267);
   border-radius: 8px;
   margin-right: 50px;
+  margin-bottom: 100px;
   width: 240px;
   max-width: 240px;
   overflow: hidden;
@@ -35,6 +36,8 @@
 }
 .home-usuario h1{
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .jogos form {
   display: flex;
