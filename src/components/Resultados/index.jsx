@@ -12,17 +12,44 @@ export default class Resultados extends Component{
     }
   }
  componentDidMount(){
-   console.log('ola')
+   this.getConcurso(1)
  }
 
-  async getConcurso(type, concurso){
-    const response = await api.get(`/contest/${type}/${concurso}`)
-    console.log('olaa', response)
+  async getConcurso(type){
+    const response = await api.get(`/contests/${type}`)
+    if(!response){
+      console.log('Não tem response')
+    }
+    console.log(response)
   }
-
+  add(){
+    let conc = this.state.concurso
+    conc += 1
+    this.setState({ concurso: conc})
+  }
+  remove(){
+    let conc = this.state.concurso
+    if(conc < 2){
+      return 
+    }
+    conc -= 1
+    this.setState({ concurso: conc })
+  }
   render(){
     return(
-      <h1>Resultados</h1>
+      <div className="resultados">        
+        <button onClick={e => this.remove()}>Anterior</button>
+        <div className="info-concurso">
+          <h1>Lotofácil</h1>
+          <p>Concurso: {this.state.concurso}</p>
+          <span>
+            1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+            <hr/>
+          </span>
+          <p>Data do Sorteio: 12/12/2019</p>
+        </div>
+        <button onClick={e => this.add()} >Proximo</button>
+      </div>
     )
   }
 }

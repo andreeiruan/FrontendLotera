@@ -1,0 +1,38 @@
+.resultados{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  margin-left: 28rem;
+  width: 450px;
+  background: rgb(80, 82, 224);
+  height: 300px;
+  border-radius: 8px;
+  border: 1px solid #888;
+  box-shadow: 4px 5px 6px #555;
+  color: #fff;
+}
+.resultados button{
+  height: 20px;
+  margin-top: 130px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: none;
+  width: 65px;
+  color: #fff;
+  background: rgb(235, 143, 81);
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px #fff;
+}
+.info-concurso{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.info-concurso h1{
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
+.info-concurso p{
+  margin: 5px;
+}
