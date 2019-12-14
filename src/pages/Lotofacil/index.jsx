@@ -20,7 +20,7 @@ export default class Lotofacil extends React.Component{
   }
   async handleSubmit(e){
     e.preventDefault()
-    const { id_type, contest, numeros } = this.state
+    const { contest, numeros } = this.state
 
     if(numeros.length > 15) return window.alert('Você selecionou mais de 15 números')
     if(numeros.length < 15) return window.alert('Você selecionou menos de 15 números')
@@ -64,8 +64,7 @@ export default class Lotofacil extends React.Component{
       return 
     }
 
-    this.state.numeros.push(parseInt(n))
-    let numeros = this.state.numeros.sort((a, b) => a - b)  
+    this.state.numeros.push(parseInt(n))  
   }
 
   surpresinha(e){

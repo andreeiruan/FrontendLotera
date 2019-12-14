@@ -1,9 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css';
-
-import { isAuthenticated } from './services/auth'
-
-import Menu from './components/Menu'
 import Footer from './components/Footer'
 import Routes from './routes'
 

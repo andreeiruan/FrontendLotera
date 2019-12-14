@@ -27,7 +27,7 @@ export default class Cadastro extends Component{
     if(password !== confirm) return window.alert('Senhas não batem')
     
     try {
-      const response = await api.post('/users', { 
+       await api.post('/users', { 
         name,
         email,
         password

@@ -1,3 +1,12 @@
+.home-usuario{
+  display: flex;
+  justify-content: space-between;
+}
+.ola{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 .jogos{
   display: flex;
   float: right;
@@ -34,11 +43,6 @@
   color: #000;
 
 }
-.home-usuario h1{
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
 .jogos form {
   display: flex;
   flex-direction: column;
@@ -49,4 +53,7 @@
 .jogos form button{
   margin-top: 5px
 }
-
+.jogos h3{
+  color: #fff;
+  margin-top: 5px;
+}

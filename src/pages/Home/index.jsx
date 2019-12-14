@@ -6,6 +6,7 @@ import './style.css'
 
 import Jogos from '../../components/Jogos'
 import Menu from '../../components/Menu'
+import Resultados from '../../components/Resultados'
 
 export default class Home extends Component{
   constructor(props){
@@ -29,6 +30,9 @@ export default class Home extends Component{
      const response = api.get(`/users/${id}`)
        .then(resp => this.setState({ user: resp.data.name }))
      this.getGames(id)
+     if(!response){
+       console.log('Não tem response ')
+     }
   }
 
   async handleSubmit(e){
@@ -72,10 +76,11 @@ export default class Home extends Component{
     return ( 
       <>
         <Menu />
+        <h1 className='ola'>{`Olá, ${this.state.user}`}</h1>   
         <div className='home-usuario'>
-        <h1>{`Olá, ${this.state.user}`}</h1>        
+        <Resultados />     
         <div className="jogos">
-          <h3>Seus últimas aposta</h3>
+          <h3>Suas últimas apostas</h3>
           <Jogos nome='Lotofácil' concursoData={this.state.dataLoto}
           concursoHora={this.state.horaLoto}
             jogos={this.state.loto} classe={'loto'} />

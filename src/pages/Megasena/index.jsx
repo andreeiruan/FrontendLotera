@@ -31,7 +31,7 @@ export default class MegaSena extends Component{
     e.preventDefault()
     const { id_contest, numeros } = this.state
 
-    if(numeros.length == 0) return window.alert('Selecione os números da sua aposta!')
+    if(numeros.length === 0) return window.alert('Selecione os números da sua aposta!')
     if(numeros.length > 6) return window.alert('Você selecionou mais de 6 números!')
     if(numeros.length < 6) return window.alert('Você selecionou menos de 6 números!')
     if(!id_contest) return window.alert('Selecione um concurso!')
