@@ -34,7 +34,9 @@ export default class Cadastro extends Component{
       })
     } catch (error) {
       return window.alert('Ocorreu um erro!')      
-    }  
+    }
+    window.alert('Cadastro realizado com sucesso!')
+    return this.props.history.push('/')
   }
 
   render(){
