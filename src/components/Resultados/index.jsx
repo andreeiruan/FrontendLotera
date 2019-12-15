@@ -8,7 +8,9 @@ export default class Resultados extends Component{
     super(props)
     this.state = {
       type: 1,
-      concurso: 1
+      numeros: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+      concurso: 1,
+
     }
   }
  componentDidMount(){
@@ -38,17 +40,18 @@ export default class Resultados extends Component{
   render(){
     return(
       <div className="resultados">        
-        <button onClick={e => this.remove()}>Anterior</button>
+        <button onClick={e => this.remove()} className="btn">Anterior</button>
         <div className="info-concurso">
           <h1>Lotofácil</h1>
+          <ul>
+            {this.state.numeros.map((num, indice) => (
+              <li key={indice}><button>{num}</button></li>
+              ))}
+          </ul>
           <p>Concurso: {this.state.concurso}</p>
-          <span>
-            1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
-            <hr/>
-          </span>
           <p>Data do Sorteio: 12/12/2019</p>
         </div>
-        <button onClick={e => this.add()} >Proximo</button>
+        <button onClick={e => this.add()} className="btn">Proximo</button>
       </div>
     )
   }

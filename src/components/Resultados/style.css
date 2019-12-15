@@ -3,15 +3,15 @@
   justify-content: space-between;
   margin-top: 25px;
   margin-left: 10rem;
-  width: 450px;
-  background: rgb(80, 82, 224);
+  width: 600px;
+  background: rgba(0, 23, 235, 0.411);
   height: 300px;
   border-radius: 8px;
   border: 1px solid #888;
   box-shadow: 4px 5px 6px #555;
   color: #fff;
 }
-.resultados button{
+.resultados .btn{
   height: 20px;
   margin-top: 130px;
   margin-left: 10px;
@@ -22,6 +22,22 @@
   background: rgb(235, 143, 81);
   border-radius: 8px;
   box-shadow: 2px 2px 2px #fff;
+}
+.resultados .info-concurso ul{
+  width: 350px;
+  margin-top: 38px;
+}
+.resultados .info-concurso ul li{
+
+  display: inline;
+  padding: 3px;
+}
+.resultados .info-concurso ul li button{
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  background: rgba(17, 19, 19, 0.89);
 }
 .info-concurso{
   display: flex;
@@ -35,4 +51,5 @@
 }
 .info-concurso p{
   margin: 5px;
+  margin-top: 20px;
 }
