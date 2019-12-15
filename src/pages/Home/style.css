@@ -1,60 +1,74 @@
-.home-usuario{
+.home-usuario .cabecalho{
+display: flex;
+flex-direction: column;
+width: 100%;
+background: rgb(179, 202, 245);
+height: 500px;
+}
+.home-usuario .cabecalho .selecao-jogo{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+.home-usuario .cabecalho .selecao-jogo form{
+  margin-left: -100px;
+}
+.home-usuario .cabecalho .selecao-jogo form label{
+  color: #fff;
+  font-size: 32px;
+  margin: 5px;
 }
 .ola{
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.jogos{
+.ultimas-apostas{
   display: flex;
-  float: right;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-color: rgba(0, 0, 255, 0.267);
-  border-radius: 8px;
-  margin-top: -100px;
-  margin-right: 50px;
-  margin-bottom: 100px;
-  width: 240px;
-  max-width: 240px;
-  overflow: hidden;
+  margin-top: px;
+  padding: 5px;
+  width: 100%;
+}
+.ultimas-apostas h3{
+  text-align: center;
+  color: #fff;
+  margin-top: 0px;
+}
+.jogos{
+  display: flex;
+  flex-direction: row;
   padding: 5px;
 }
-.jogos button{
+.cabecalho button{
   font-size: 18px;
   background-color: rgb(248, 140, 51);
   color: #fff;
   width: 190px;
 }
-.jogos button:hover{
+.cabecalho button:hover{
   background-color: rgb(240, 109, 2);
   cursor: pointer;
 }
-.jogos select{
+.cabecalho select{
   background: rgba(4, 4, 199, 0.61);
   border-radius: 5px;
   color: #fff;
   font-size: 18px;
 }
-.jogos select option{
+.cabecalho select option{
   background: #fff;
   color: #000;
 
 }
-.jogos form {
+.cabecalho form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 25px;  
 }
-.jogos form button{
+.cabecalho form button{
   margin-top: 5px
-}
-.jogos h3{
-  color: #fff;
-  margin-top: 5px;
 }

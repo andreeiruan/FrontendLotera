@@ -109,7 +109,7 @@ export default class MegaSena extends Component{
     return(
       <> 
         <Menu /> 
-        <div className="mega">
+        <div className="es-mega">
           <h1>MegaSena</h1>
           <form onSubmit={e => this.handleSubmit(e)}>
             <ul className="escolha-mega">

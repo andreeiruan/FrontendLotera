@@ -1,4 +1,4 @@
-.loto {
+.es-loto {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,7 +6,7 @@
   text-align: center;
   margin-top: 40px;
 }
-.loto form{
+.es-loto form{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,21 +14,21 @@
   text-align: center;
   margin-top: 2px;
 }
-.loto form hr{
+.es-loto form hr{
   width: 600px;
 }
-.loto form label {
+.es-loto form label {
   margin-top: 10px;
   font-weight: bold;
 }
 
-.loto form select {
+.es-loto form select {
   margin-top: 3px;
   color: #fff;
   background: rgba(66, 66, 226, 0.541);
   border-radius: 12px;
 }
-.loto h1{
+.es-loto h1{
    background: rgba(161, 1, 167, 0.5);
    width: 100%;
    color: #fff;

@@ -1,4 +1,4 @@
-.mega{
+.es-mega{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,26 +6,26 @@
   text-align: center;
   margin-top: 40px;
 }
-.mega h1{
+.es-mega h1{
   background: rgba(22, 202, 22, 0.856);
   width: 100%;
   height: 65px;
   color: #fff;
 }
-.mega form{
+.es-mega form{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.mega form hr{
+.es-mega form hr{
   width: 600px;
 }
-.mega form label{
+.es-mega form label{
   margin-top: 10px;
   font-weight: bold;
 }
-.mega form select{
+.es-mega form select{
   margin-top: 3px;
   color: #fff;
   background: rgba(66, 66, 226, 0.541);

@@ -2,34 +2,65 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 5px;
+  align-items: center;
+  min-height: 180px;
+  max-height: 180px;
+  /* padding: 5px; */
+  margin: 30px;
   background: #fff;
-  width: 200px;
+  width: 400px;
 }
 .container-jogo h3{
   text-align: center;
   color: #fff;
 }
-.container-jogo ul li{
-  list-style: none;
-  color: #000;
-}
 .container-jogo ul li p{
   text-align: center;
   padding: 5px;
 }
+.container-jogo .ver-mais {
+  font-size: 18px;
+  background-color: rgb(248, 140, 51);
+  color: #fff;
+  width: 190px;
+}
+
+.container-jogo .ver-mais:hover {
+  background-color: rgb(240, 109, 2);
+  cursor: pointer;
+}
+.container-jogo .numeros-ultimas-apostas li{
+  display: inline;
+  padding: 1px;  
+}
+.container-jogo .numeros-ultimas-apostas li button{
+  width: 30px;
+  border: none;
+  height: 30px;
+  border-radius: 15px;
+  background: rgba(73, 116, 117, 0.5);
+}
 .mega h3{
   background: rgb(0, 194, 0);
   width: 100%;
+}
+.mega button{
+  margin-top: 30px;
 }
 .loto h3{
   background: rgb(155, 1, 160);
   width: 100%;
   margin-left: 0px;
 }
+.loto button{
+  margin-top: 10px;
+}
 .quina h3{
   background: blue;
   width: 100%;
+}
+.quina button{
+  margin-top: 30px;
 }
 .container-jogo ul li{
   display: flex;

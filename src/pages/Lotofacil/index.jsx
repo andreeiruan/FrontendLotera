@@ -102,7 +102,7 @@ export default class Lotofacil extends React.Component{
     return (
       <> 
         <Menu />
-        <div className="loto">
+        <div className="es-loto">
           <h1>Lotofácil</h1>
           <form onSubmit={e => this.handleSubmit(e)}>
             <ul className="escolha-loto">

@@ -1,4 +1,4 @@
-.quina{
+.es-quina{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,27 +6,27 @@
   text-align: center;
   margin-top: 40px;
 }
-.quina h1{
+.es-quina h1{
   background: blue;
   width: 100%;
   height: 65px;
   color: #fff
 }
-.quina form{
+.es-quina form{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.quina form hr{
+.es-quina form hr{
   width: 600px;
 }
-.quina form label {
+.es-quina form label {
   margin-top: 10px;
   font-weight: bold;
 }
 
-.quina form select {
+.es-quina form select {
   margin-top: 3px;
   color: #fff;
   background: rgba(66, 66, 226, 0.541);

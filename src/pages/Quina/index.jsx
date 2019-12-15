@@ -111,7 +111,7 @@ export default class Quina extends Component{
     return (
       <>
       <Menu />
-      <div className="quina">
+      <div className="es-quina">
         <h1>Quina</h1>
         <form onSubmit={e => this.handleSubmit(e)}>
           <ul className="escolha-quina">

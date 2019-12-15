@@ -37,7 +37,6 @@ export default class Home extends Component{
 
   async handleSubmit(e){
     e.preventDefault()
-    console.log(this.state)
     return this.redirecionarPara(this.state.jogo)
   }
 
@@ -51,23 +50,26 @@ export default class Home extends Component{
     const responseMega = await api.get(`/games/${id}/2`)
     const responseQuina = await api.get(`/games/${id}/3`)
 
-    this.setState({ loto: responseLoto.data})
-    if(this.state.loto.contest){
-      const dataConcursoLoto = new Date(this.state.loto.contest.date)
+    const numsLoto = responseLoto.data.nums.split('-')
+    this.setState({ loto: numsLoto})
+    if(responseLoto.data.contest){
+      const dataConcursoLoto = new Date(responseLoto.data.contest.date)
       this.setState({ dataLoto: dataConcursoLoto.toLocaleDateString()})
       this.setState({ horaLoto: dataConcursoLoto.toLocaleTimeString()})
     }
     
-    this.setState({ mega: responseMega.data})
-    if(this.state.mega.contest){
-      const dataConcursoMega = new Date(this.state.mega.contest.date)
+    const numsMega = responseMega.data.nums.split('-')
+    this.setState({ mega: numsMega})
+    if(responseMega.data.contest){
+      const dataConcursoMega = new Date(responseMega.data.contest.date)
       this.setState({ dataMega: dataConcursoMega.toLocaleDateString()})
       this.setState({ horaMega: dataConcursoMega.toLocaleTimeString() })      
     }
-
-    this.setState({ quina: responseQuina.data})
-    if(this.state.quina.contest){
-      const dataConcursoQuina = new Date(this.state.quina.contest.date)
+    
+    const numsQuina = responseQuina.data.nums.split('-')
+    this.setState({ quina: numsQuina})
+    if(responseQuina.data.contest){
+      const dataConcursoQuina = new Date(responseQuina.data.contest.date)
       this.setState({ dataQuina: dataConcursoQuina.toLocaleDateString()})
       this.setState({ horaQuina: dataConcursoQuina.toLocaleTimeString() })
     }
@@ -76,33 +78,39 @@ export default class Home extends Component{
     return ( 
       <>
         <Menu />
-        <h1 className='ola'>{`Olá, ${this.state.user}`}</h1>   
         <div className='home-usuario'>
-        <Resultados />     
-        <div className="jogos">
+        <header className="cabecalho">
+          <h1 className='ola'>{`Olá, ${this.state.user} confira os sorteios da semana`}</h1>   
+            <div className="selecao-jogo">
+              <Resultados /> 
+              <form onSubmit={e => this.handleSubmit(e)}>
+                <label htmlFor="tipos">Fazer uma aposta?</label>
+                <select name="tipos" value={this.state.jogo}
+                  onChange={e => this.setState({ jogo: e.target.value })}>
+                  <option value={undefined}>Selecione um Jogo</option>
+                  <option value={'lotofacil'} >Lotofácil</option>
+                  <option value={'megasena'}>Mega Sena</option>
+                  <option value={'quina'}>Quina</option>
+                </select>
+                <button type='submit'>Fazer uma aposta</button>
+              </form>
+            </div>
+        </header>
+        <div className="ultimas-apostas">
           <h3>Suas últimas apostas</h3>
-          <Jogos nome='Lotofácil' concursoData={this.state.dataLoto}
-          concursoHora={this.state.horaLoto}
-            jogos={this.state.loto} classe={'loto'} />
-          <hr/>
-          <Jogos nome='Mega Sena' concursoData={this.state.dataMega}
-          concursoHora={this.state.horaMega}
-          jogos={this.state.mega} classe={'mega'}/>            
-          <hr/>
-          <Jogos nome='Quina' concursoData={this.state.dataQuina}
-          concursoHora={this.state.horaQuina}
-          jogos={this.state.quina} classe={'quina'}/>
-          <form onSubmit={e => this.handleSubmit(e)}>
-            <label htmlFor="tipos">Jogo</label>
-            <select name="tipos" value={this.state.jogo}
-              onChange={e => this.setState({ jogo: e.target.value })}>
-              <option value={undefined}>Selecione um Jogo</option>
-              <option value={'lotofacil'} >Lotofácil</option>
-              <option value={'megasena'}>Mega Sena</option>
-              <option value={'quina'}>Quina</option>
-            </select>
-            <button type='submit'>Fazer uma aposta</button>
-          </form>
+          <div className="jogos">
+            <Jogos nome='Lotofácil' concursoData={this.state.dataLoto}
+            concursoHora={this.state.horaLoto}
+              jogos={this.state.loto} classe={'loto'} />
+            
+            <Jogos nome='Mega Sena' concursoData={this.state.dataMega}
+            concursoHora={this.state.horaMega}
+            jogos={this.state.mega} classe={'mega'}/>            
+            
+            <Jogos nome='Quina' concursoData={this.state.dataQuina}
+            concursoHora={this.state.horaQuina}
+            jogos={this.state.quina} classe={'quina'}/>
+          </div>
         </div>
       </div>
     </>
