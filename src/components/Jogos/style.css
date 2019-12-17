@@ -91,3 +91,14 @@
 .quina .numeros-ultimas-apostas{
   margin-top: 15px;
 }
+.sem-aposta{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sem-aposta h3{
+  margin-top: 10px;
+}
+.sem-aposta #sem{
+  margin-top: -50px;
+}

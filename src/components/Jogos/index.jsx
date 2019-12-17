@@ -7,11 +7,7 @@ export default class Jogos extends Component{
     return(
         <div className={`container-jogo ${this.props.classe}`} >
           <h3>{this.props.nome}</h3>
-              {this.props.jogos.msg ? (
-                <> 
-                <p>{this.props.jogos.msg}</p>                
-                </>
-              ): (
+              {this.props.jogos.length > 0 ? (
                 <>
                 <ul className="numeros-ultimas-apostas">
                   {this.props.jogos.map((jogo, indice )=> (
@@ -24,7 +20,11 @@ export default class Jogos extends Component{
                     <p>Hora: {this.props.concursoHora} </p>
                   </section>
                   <button className="ver-mais">Ver mais</button>
-                </>
+                </>                
+              ): (
+            <>
+              <p id="sem">Você não tem apostas ainda</p>
+            </>
               )
               }
         </div>

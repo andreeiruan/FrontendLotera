@@ -22,7 +22,8 @@ export default class Home extends Component{
       dataQuina: '',
       horaQuina: '',
       user: '',
-      jogo: ''
+      jogo: '',
+      semApostas: ''
     }
   }
    componentDidMount(){
@@ -51,28 +52,40 @@ export default class Home extends Component{
     const responseMega = await api.get(`/games/${id}/2`)
     const responseQuina = await api.get(`/games/${id}/3`)
 
-    const numsLoto = responseLoto.data.nums.split('-')
-    this.setState({ loto: numsLoto})
-    if(responseLoto.data.contest){
-      const dataConcursoLoto = new Date(responseLoto.data.contest.date)
-      this.setState({ dataLoto: dataConcursoLoto.toLocaleDateString()})
-      this.setState({ horaLoto: dataConcursoLoto.toLocaleTimeString()})
+    if(!responseLoto.data.nums){
+      this.setState({semApostas: 'sem-aposta'})
+    }else{
+      const numsLoto = responseLoto.data.nums.split('-')
+      this.setState({ loto: numsLoto})
+      if(responseLoto.data.contest){
+        const dataConcursoLoto = new Date(responseLoto.data.contest.date)
+        this.setState({ dataLoto: dataConcursoLoto.toLocaleDateString()})
+        this.setState({ horaLoto: dataConcursoLoto.toLocaleTimeString()})
+      }
+    }
+
+    if(!responseMega.data.nums){
+      this.setState({semApostas: 'sem-aposta'})
+    }else{      
+      const numsMega = responseMega.data.nums.split('-')
+      this.setState({ mega: numsMega})
+      if(responseMega.data.contest){
+        const dataConcursoMega = new Date(responseMega.data.contest.date)
+        this.setState({ dataMega: dataConcursoMega.toLocaleDateString()})
+        this.setState({ horaMega: dataConcursoMega.toLocaleTimeString() })      
+      }
     }
     
-    const numsMega = responseMega.data.nums.split('-')
-    this.setState({ mega: numsMega})
-    if(responseMega.data.contest){
-      const dataConcursoMega = new Date(responseMega.data.contest.date)
-      this.setState({ dataMega: dataConcursoMega.toLocaleDateString()})
-      this.setState({ horaMega: dataConcursoMega.toLocaleTimeString() })      
-    }
-    
-    const numsQuina = responseQuina.data.nums.split('-')
-    this.setState({ quina: numsQuina})
-    if(responseQuina.data.contest){
-      const dataConcursoQuina = new Date(responseQuina.data.contest.date)
-      this.setState({ dataQuina: dataConcursoQuina.toLocaleDateString()})
-      this.setState({ horaQuina: dataConcursoQuina.toLocaleTimeString() })
+    if(!responseQuina.data.nums){
+      this.setState({ semApostas: 'sem-aposta' })
+    }else{
+      const numsQuina = responseQuina.data.nums.split('-')
+      this.setState({ quina: numsQuina})
+      if(responseQuina.data.contest){
+        const dataConcursoQuina = new Date(responseQuina.data.contest.date)
+        this.setState({ dataQuina: dataConcursoQuina.toLocaleDateString()})
+        this.setState({ horaQuina: dataConcursoQuina.toLocaleTimeString() })
+      }
     }
   }
   render(){
@@ -102,15 +115,15 @@ export default class Home extends Component{
             <div className="jogos">
               <Jogos nome='Lotofácil' concursoData={this.state.dataLoto}
               concursoHora={this.state.horaLoto}
-                jogos={this.state.loto} classe={'loto'} />
+                jogos={this.state.loto} classe={`loto ${this.state.semApostas}`} />
               
               <Jogos nome='Mega Sena' concursoData={this.state.dataMega}
               concursoHora={this.state.horaMega}
-              jogos={this.state.mega} classe={'mega'}/>            
+              jogos={this.state.mega} classe={`mega ${this.state.semApostas}`}/>            
               
               <Jogos nome='Quina' concursoData={this.state.dataQuina}
               concursoHora={this.state.horaQuina}
-              jogos={this.state.quina} classe={'quina'}/>
+              jogos={this.state.quina} classe={`quina ${this.state.semApostas}`}/>
             </div>
           </div>
       </div>
