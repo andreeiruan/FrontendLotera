@@ -19,8 +19,10 @@ export default class Jogos extends Component{
                   ))}
                 </ul>
                   <hr/>
-                  <p>Data do Concurso: {this.props.concursoData}</p>
-                  <p>Hora: {this.props.concursoHora} </p>
+                  <section>
+                    <p>Data do Concurso: {this.props.concursoData}</p>
+                    <p>Hora: {this.props.concursoHora} </p>
+                  </section>
                   <button className="ver-mais">Ver mais</button>
                 </>
               )

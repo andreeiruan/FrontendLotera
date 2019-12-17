@@ -2,9 +2,8 @@
   display: flex;
   justify-content: space-between;
   margin-top: 25px;
-  margin-left: 10rem;
-  width: 600px;
-  background: rgba(0, 23, 235, 0.411);
+  width: 800px;
+  background: rgba(60, 79, 248, 0.925);
   height: 300px;
   border-radius: 8px;
   border: 1px solid #888;
@@ -21,23 +20,26 @@
   color: #fff;
   background: rgb(235, 143, 81);
   border-radius: 8px;
-  box-shadow: 2px 2px 2px #fff;
+  box-shadow: 2px 5px 18px #fff;
 }
 .resultados .info-concurso ul{
   width: 350px;
   margin-top: 38px;
 }
 .resultados .info-concurso ul li{
-
   display: inline;
-  padding: 3px;
+  padding: 10px;
 }
 .resultados .info-concurso ul li button{
+  margin-top: 5px;
   border: none;
-  width: 35px;
-  height: 35px;
-  border-radius: 20px;
-  background: rgba(17, 19, 19, 0.89);
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background: rgba(182, 230, 231, 0.5);
+  box-shadow: 2px 0px 5px rgb(56, 56, 56);
+  color: #fff;
+  font-size: 20px;
 }
 .info-concurso{
   display: flex;
@@ -45,11 +47,6 @@
   justify-content: center;
   align-items: center;
 }
-.info-concurso h1{
-  margin-top: -30px;
-  margin-bottom: 20px;
-}
 .info-concurso p{
   margin: 5px;
-  margin-top: 20px;
 }

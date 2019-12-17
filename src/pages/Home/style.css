@@ -3,24 +3,69 @@ display: flex;
 flex-direction: column;
 width: 100%;
 background: rgb(179, 202, 245);
-height: 500px;
+min-height: 730px;
+}
+.ola {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .home-usuario .cabecalho .selecao-jogo{
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .home-usuario .cabecalho .selecao-jogo form{
-  margin-left: -100px;
+  margin-top: 50px;
 }
 .home-usuario .cabecalho .selecao-jogo form label{
   color: #fff;
   font-size: 32px;
   margin: 5px;
 }
-.ola{
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+.cabecalho form select {
+  background: rgba(4, 4, 199, 0.61);
+  margin-top: 25px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.cabecalho form button {
+  font-size: 20px;
+  margin-top: 10px;
+  background-color: rgb(248, 140, 51);
+  color: #fff;
+  width: 220px;
+  height: 40px;
+  border-radius: 25px;
+}
+
+.cabecalho button:hover {
+  background-color: rgb(240, 109, 2);
+  cursor: pointer;
+}
+
+.cabecalho select option {
+  background: #fff;
+  color: #000;
+
+}
+
+.cabecalho form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.jogos{
+  display: flex;
+  flex-direction: row;
+}
+.jogos section{
+  margin-top: 15px
 }
 .ultimas-apostas{
   display: flex;
@@ -35,40 +80,4 @@ height: 500px;
 .ultimas-apostas h3{
   text-align: center;
   color: #fff;
-  margin-top: 0px;
-}
-.jogos{
-  display: flex;
-  flex-direction: row;
-  padding: 5px;
-}
-.cabecalho button{
-  font-size: 18px;
-  background-color: rgb(248, 140, 51);
-  color: #fff;
-  width: 190px;
-}
-.cabecalho button:hover{
-  background-color: rgb(240, 109, 2);
-  cursor: pointer;
-}
-.cabecalho select{
-  background: rgba(4, 4, 199, 0.61);
-  border-radius: 5px;
-  color: #fff;
-  font-size: 18px;
-}
-.cabecalho select option{
-  background: #fff;
-  color: #000;
-
-}
-.cabecalho form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.cabecalho form button{
-  margin-top: 5px
 }

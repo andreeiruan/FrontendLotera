@@ -26,15 +26,16 @@ export default class Home extends Component{
     }
   }
    componentDidMount(){
-     const id = localStorage.getItem('idUser')
-     const response = api.get(`/users/${id}`)
-       .then(resp => this.setState({ user: resp.data.name }))
-     this.getGames(id)
-     if(!response){
-       console.log('Não tem response ')
-     }
+     this.getResponse()
   }
-
+  
+  async getResponse(){
+    const id = localStorage.getItem('idUser')
+    const response = await api.get(`/users/${id}`)
+    this.getGames(id)
+    console.log(response)
+    return this.setState({ user: response.data.name})
+  }
   async handleSubmit(e){
     e.preventDefault()
     return this.redirecionarPara(this.state.jogo)
@@ -79,39 +80,39 @@ export default class Home extends Component{
       <>
         <Menu />
         <div className='home-usuario'>
-        <header className="cabecalho">
-          <h1 className='ola'>{`Olá, ${this.state.user} confira os sorteios da semana`}</h1>   
-            <div className="selecao-jogo">
-              <Resultados /> 
-              <form onSubmit={e => this.handleSubmit(e)}>
-                <label htmlFor="tipos">Fazer uma aposta?</label>
-                <select name="tipos" value={this.state.jogo}
-                  onChange={e => this.setState({ jogo: e.target.value })}>
-                  <option value={undefined}>Selecione um Jogo</option>
-                  <option value={'lotofacil'} >Lotofácil</option>
-                  <option value={'megasena'}>Mega Sena</option>
-                  <option value={'quina'}>Quina</option>
-                </select>
-                <button type='submit'>Fazer uma aposta</button>
-              </form>
+          <header className="cabecalho">
+            <h1 className='ola'>{`Olá, ${this.state.user} confira os sorteios da semana`}</h1>   
+              <div className="selecao-jogo">
+                <Resultados /> 
+                <form onSubmit={e => this.handleSubmit(e)}>
+                  <label htmlFor="tipos">Fazer uma aposta?</label>
+                  <select name="tipos" value={this.state.jogo}
+                    onChange={e => this.setState({ jogo: e.target.value })}>
+                    <option value={undefined}>Selecione um Jogo</option>
+                    <option value={'lotofacil'} >Lotofácil</option>
+                    <option value={'megasena'}>Mega Sena</option>
+                    <option value={'quina'}>Quina</option>
+                  </select>
+                  <button type='submit'>Fazer uma aposta</button>
+                </form>
+              </div>
+          </header>
+          <div className="ultimas-apostas">
+            <h3>Suas últimas apostas</h3>
+            <div className="jogos">
+              <Jogos nome='Lotofácil' concursoData={this.state.dataLoto}
+              concursoHora={this.state.horaLoto}
+                jogos={this.state.loto} classe={'loto'} />
+              
+              <Jogos nome='Mega Sena' concursoData={this.state.dataMega}
+              concursoHora={this.state.horaMega}
+              jogos={this.state.mega} classe={'mega'}/>            
+              
+              <Jogos nome='Quina' concursoData={this.state.dataQuina}
+              concursoHora={this.state.horaQuina}
+              jogos={this.state.quina} classe={'quina'}/>
             </div>
-        </header>
-        <div className="ultimas-apostas">
-          <h3>Suas últimas apostas</h3>
-          <div className="jogos">
-            <Jogos nome='Lotofácil' concursoData={this.state.dataLoto}
-            concursoHora={this.state.horaLoto}
-              jogos={this.state.loto} classe={'loto'} />
-            
-            <Jogos nome='Mega Sena' concursoData={this.state.dataMega}
-            concursoHora={this.state.horaMega}
-            jogos={this.state.mega} classe={'mega'}/>            
-            
-            <Jogos nome='Quina' concursoData={this.state.dataQuina}
-            concursoHora={this.state.horaQuina}
-            jogos={this.state.quina} classe={'quina'}/>
           </div>
-        </div>
       </div>
     </>
     )
