@@ -4,7 +4,7 @@
   margin-top: 25px;
   width: 800px;
   background: rgba(60, 79, 248, 0.925);
-  height: 300px;
+  height: 450px;
   border-radius: 8px;
   border: 1px solid #888;
   box-shadow: 4px 5px 6px #555;
@@ -12,7 +12,7 @@
 }
 .resultados .btn{
   height: 20px;
-  margin-top: 130px;
+  margin-top: 200px;
   margin-left: 10px;
   margin-right: 10px;
   border: none;
@@ -20,10 +20,13 @@
   color: #fff;
   background: rgb(235, 143, 81);
   border-radius: 8px;
-  box-shadow: 2px 5px 18px #fff;
+  box-shadow: 2px 1px 2px #fff;
 }
 .resultados .info-concurso ul{
-  width: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 450px;
   margin-top: 38px;
 }
 .resultados .info-concurso ul li{
@@ -49,4 +52,16 @@
 }
 .info-concurso p{
   margin: 5px;
+}
+#ver-mais{
+  margin-top: -30px;
+  width: 150px;
+  color: #fff;
+  border-radius: 8px;
+  background: rgb(235, 143, 81);
+  border: none;
+  box-shadow: 2px 1px 2px #fff;
+}
+#ver-mais:hover{
+  background: chocolate;
 }

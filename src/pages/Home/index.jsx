@@ -34,7 +34,6 @@ export default class Home extends Component{
     const id = localStorage.getItem('idUser')
     const response = await api.get(`/users/${id}`)
     this.getGames(id)
-    console.log(response)
     return this.setState({ user: response.data.name})
   }
   async handleSubmit(e){
