@@ -40,6 +40,14 @@ export default class Resultados extends Component{
        type -= 1
      }
    }
+   
+    const response = await api.get(`/results/${type}`)
+    this.setState({ type })
+    let numeros = response.data.result.split('-')
+    this.setState({ numeros: numeros })
+    this.setState({ concurso: response.data.results.id })
+    const data = new Date(response.data.results.date)
+    this.setState({ data: data.toLocaleDateString() })
 
    switch (type) {
      case 1:
@@ -54,14 +62,6 @@ export default class Resultados extends Component{
      default:
        this.setState({ nomeTipo: 'Lotofácil' })
    }
-
-   const response = await api.get(`/results/${type}`)
-   this.setState({ type })
-   let numeros = response.data.result.split('-')
-   this.setState({ numeros: numeros })
-   this.setState({ concurso: response.data.results.id })
-   const data = new Date(response.data.results.date)
-   this.setState({ data: data.toLocaleDateString() })
 
  } 
  
