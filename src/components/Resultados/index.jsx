@@ -25,69 +25,51 @@ export default class Resultados extends Component{
      this.setState({ concurso: response.data.results.id}) 
    })
  }
-  async add(){
-    let type = this.state.type
-    if(type === 3){
-      return
-    }
-    type += 1
+ async mudarJogo(sinal){
+   let type = this.state.type
+   if (sinal === 'anterior'){
+     if (type === 3) {
+       type = 1
+     } else {
+       type += 1
+     }
+   }else{
+     if (type === 1) {
+       type = 3
+     } else {
+       type -= 1
+     }
+   }
 
-    switch (type) {
-      case 1:
-        this.setState({ nomeTipo: 'Lotofácil'})
-        break
-        case 2: 
-        this.setState({ nomeTipo: 'Mega Sena'})
-        break
-        case 3:
-          this.setState({ nomeTipo: 'Quina'})
-          break
-        default: 
-          this.setState({ nomeTipo: 'Lotofácil' })
-    }
+   switch (type) {
+     case 1:
+       this.setState({ nomeTipo: 'Lotofácil' })
+       break
+     case 2:
+       this.setState({ nomeTipo: 'Mega Sena' })
+       break
+     case 3:
+       this.setState({ nomeTipo: 'Quina' })
+       break
+     default:
+       this.setState({ nomeTipo: 'Lotofácil' })
+   }
 
-    const response = await api.get(`/results/${type}`)
-    this.setState({ type })
-    let numeros = response.data.result.split('-')
-    this.setState({ numeros: numeros })
-    this.setState({ concurso: response.data.results.id })
-    const data = new Date(response.data.results.date)
-    this.setState({ data: data.toLocaleDateString() })
-  }
-  async remove(){
-    let type = this.state.type
-    if(type === 1){
-      return 
-    }
-    type -= 1
-    switch (type) {
-      case 1:
-        this.setState({ nomeTipo: 'Lotofácil' })
-        break
-      case 2:
-        this.setState({ nomeTipo: 'Mega Sena' })
-        break
-      case 3:
-        this.setState({ nomeTipo: 'Quina' })
-        break
-      default:
-        this.setState({ nomeTipo: 'Lotofácil' })
-    }
+   const response = await api.get(`/results/${type}`)
+   this.setState({ type })
+   let numeros = response.data.result.split('-')
+   this.setState({ numeros: numeros })
+   this.setState({ concurso: response.data.results.id })
+   const data = new Date(response.data.results.date)
+   this.setState({ data: data.toLocaleDateString() })
 
-    const response = await api.get(`/results/${type}`)
-
-    this.setState({ type })
-    let numeros = response.data.result.split('-')
-    this.setState({ numeros: numeros })
-    this.setState({ concurso: response.data.results.id })
-    const data = new Date(response.data.results.date)
-    this.setState({ data: data.toLocaleDateString() })
-  }
+ } 
+ 
   render(){
     return(
       <>
       <div className="resultados">        
-        <button onClick={e => this.remove()} className="btn">Anterior</button>
+        <button onClick={e => this.mudarJogo('anterior')} className="btn">Anterior</button>
         <div className="info-concurso">
         <h1>{this.state.nomeTipo}</h1>
           <ul>
@@ -98,7 +80,7 @@ export default class Resultados extends Component{
           <p>Concurso: {this.state.concurso}</p>
           <p>Data do Sorteio: {this.state.data}</p>
         </div>
-        <button onClick={e => this.add()} className="btn">Proximo</button>
+        <button onClick={e => this.mudarJogo('proximo')} className="btn">Proximo</button>
       </div>
         <button onClick={ e => console.log('ola')} id="ver-mais">Ver mais</button>
       </>
