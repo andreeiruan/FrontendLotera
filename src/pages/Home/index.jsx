@@ -107,21 +107,21 @@ export default class Home extends Component{
                   </select>
                   <button type='submit'>Fazer uma aposta</button>
                 </form>
-              </div>
+              </div>''
           </header>
           <div className="ultimas-apostas">
             <h3>Suas últimas apostas</h3>
             <div className="jogos">
               <Jogos nome='Lotofácil' concursoData={this.state.dataLoto}
-              concursoHora={this.state.horaLoto}
+              concursoHora={this.state.horaLoto} tipo='1'
                 jogos={this.state.loto} classe={`loto ${this.state.semApostas}`} />
               
               <Jogos nome='Mega Sena' concursoData={this.state.dataMega}
-              concursoHora={this.state.horaMega}
+              concursoHora={this.state.horaMega} tipo='2'
               jogos={this.state.mega} classe={`mega ${this.state.semApostas}`}/>            
               
               <Jogos nome='Quina' concursoData={this.state.dataQuina}
-              concursoHora={this.state.horaQuina}
+              concursoHora={this.state.horaQuina} tipo='3'
               jogos={this.state.quina} classe={`quina ${this.state.semApostas}`}/>
             </div>
           </div>

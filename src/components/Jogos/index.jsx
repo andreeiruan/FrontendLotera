@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 import './style.css'
 
@@ -19,7 +20,7 @@ export default class Jogos extends Component{
                     <p>Data do Concurso: {this.props.concursoData}</p>
                     <p>Hora: {this.props.concursoHora} </p>
                   </section>
-                  <button className="ver-mais">Ver mais</button>
+            <Link to={`/jogos/${this.props.tipo}`}><button className="ver-mais">Ver mais</button></Link>
                 </>                
               ): (
             <>

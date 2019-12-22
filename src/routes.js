@@ -9,7 +9,7 @@ import MegaSena from './pages/Megasena'
 import Quina from './pages/Quina'
 
 import PrivateRoute from './PrivateRoute'
-import JogosUsuarioLoto from './pages/JogosUsuarioLoto'
+import JogosUsuario from './pages/JogosUsuario'
 
 export default () => {
   return (
@@ -21,7 +21,7 @@ export default () => {
         <PrivateRoute path='/lotofacil' component={Lotofacil}/>
         <PrivateRoute path='/megasena' component={MegaSena}/>        
         <PrivateRoute path='/quina' component={Quina}/>  
-        <PrivateRoute path='/:id_user/jogos/:id_type' component={JogosUsuarioLoto}/>      
+        <PrivateRoute path='/jogos/:tipo' component={JogosUsuario}/>      
         <PrivateRoute component={Home}/>
       </Switch>
     </BrowserRouter>

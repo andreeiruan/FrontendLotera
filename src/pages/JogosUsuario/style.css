@@ -1,0 +1,95 @@
+.container-vermais{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+.container-vermais h3{
+  text-align: center;
+  margin-top: 35px;
+  background: none;
+  color: #385091;
+  margin-bottom: 20px;
+}
+.mega h1{
+  background: rgb(0, 194, 0);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+.loto h1{
+  background: rgb(155, 1, 160);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+.quina h1{
+  background: blue;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+.container-vermais ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  max-width: 1000px;
+}
+.container-vermais ul .principal{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  color: #fff;
+  width: 350px;
+  min-height: 160px;
+  max-height: 160px;
+  box-shadow: 2px 2px 10px #222;
+  border-radius: 15px;
+  background: #fff;
+  margin: 10px;
+}
+.container-vermais ul .principal h4{
+  margin-top: 15px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.container-vermais ul .principal h4{
+  color: #385091;
+}
+.container-vermais .numeros ul{
+  padding: 15px;
+}
+.container-vermais ul .principal p{
+  text-align: center;
+}
+.container-vermais ul .principal p{
+  color: #385091;
+
+}
+
+.container-vermais .numeros li{
+  display: flex;
+  background: #222;
+  width: 30px;
+  height: 30px;
+  border-radius: 18px;
+  align-items: center;
+  justify-content: center;
+  color: #fff; 
+  margin: 3px;
+  box-shadow: 2px 2px 5px #222;
+}
+.mega .numeros li{
+  background: rgb(0, 194, 0);
+}
+.loto .numeros li{
+  background: rgb(155, 1, 160);
+}
+.quina .numeros li{
+  background: blue;
+}
