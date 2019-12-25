@@ -22,7 +22,6 @@ export default class Concursos extends Component{
     const response = await api.get(`/contestsfortype/${tipo}`)
     
     this.setState({ concursos: response.data })
-    console.log('concursos', this.state.concursos )
     if (parseInt(tipo) === 1) {
       this.setState({ titulo: 'Lotofácil' })
       this.setState({ classe: 'loto' })
