@@ -17,7 +17,6 @@ export default class Resultados extends Component{
   }
  componentDidMount(){
    api.get(`/results/${this.state.type}`).then( response => {
-     console.log(response)
      let numeros = response.data.result.split('-')
      const data = new Date(response.data.results.date)
      this.setState({ data: data.toLocaleDateString()})
