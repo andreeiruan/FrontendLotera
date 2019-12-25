@@ -15,8 +15,6 @@ export default class Quina extends Component{
   }
   componentDidMount() {
     this.getConcursos()
-    console.log(this.state.concursos)
-
   }
 
   async getConcursos() {
@@ -63,9 +61,7 @@ export default class Quina extends Component{
       nums.push(n)
       btn.setAttribute('class', 'selecionado-quina')
     } else {
-      console.log('oi')
       const apagarNum = nums.indexOf(n)
-      console.log(apagarNum)
 
       nums.splice(apagarNum, 1)
       btn.removeAttribute('class', 'selecionado-quina')

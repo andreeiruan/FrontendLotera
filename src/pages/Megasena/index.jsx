@@ -17,7 +17,6 @@ export default class MegaSena extends Component{
   }
   componentDidMount(){
     this.getConcursos()
-    console.log(this.state.concursos)
 
   }
 
