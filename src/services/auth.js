@@ -19,6 +19,7 @@ export const login = (token, id) => {
 }
 export const logout = () => {
   const date = new Date()
-  date.setTime(date.getTime() - (4*24*60*60*1000))  
+  date.setTime(date.getTime() - (4*24*60*60*1000)) 
+  localStorage.removeItem('idUser') 
   return document.cookie = `authToken=; expires=${date.toGMTString()}`
 }

@@ -38,7 +38,7 @@ export default class Cadastro extends Component{
         return this.setState({error: response.data.error})
       }
     } catch (error) {
-      return window.alert('Ocorreu um erro!')      
+      return window.alert('Estamos com problema em nosso servidor')      
     }
     window.alert('Cadastro realizado com sucesso!')
     return this.props.history.push('/')
