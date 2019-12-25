@@ -26,14 +26,18 @@ export default class Login extends Component{
     if(password.length === 0){
       return this.setState({error: "Insira sua senha"})
     }
-    try{
-      const response = await api.post('/authenticate', { email, password })
-      login(response.data.token, response.data.user.id)
-      this.props.history.push('/home')      
-
-    }catch(err){
-      return this.setState({error: 'Dados Incorretos'})
-    }
+   try {
+     const response = await api.post('/authenticate', { email, password })
+     if(!response.data.error){
+       login(response.data.token, response.data.user.id)
+       this.props.history.push('/home')   
+     }
+     else{
+       return this.setState({error: response.data.error})
+     }     
+   } catch (error) {
+     return window.alert('Desculpa, estamos com problema em nosso servidor!')
+   }
   }
 
   render(){
