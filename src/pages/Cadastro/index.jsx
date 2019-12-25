@@ -12,7 +12,8 @@ export default class Cadastro extends Component{
       name: '',
       email: '',
       password: '', 
-      confirm: ''
+      confirm: '',
+      error: ''
     }
   }
 
@@ -20,18 +21,22 @@ export default class Cadastro extends Component{
     event.preventDefault()
     const { name, email, password, confirm } = this.state
 
-    if(name.length === 0) return window.alert('Digite seu nome')
-    if(email.length === 0) return window.alert('Email invalído')
+    if(name.length === 0) return this.setState({error: 'Digite seu nome'})
+    if(email.length === 0) return this.setState({error: 'Email invalído'})
 
-    if(password < 6) return window.alert('Senha muito curta')
-    if(password !== confirm) return window.alert('Senhas não batem')
+    if(password < 6) return this.setState({error: 'Senha muito curta'})
+    if(password !== confirm) return this.setState({error: 'Senhas não batem'})
     
     try {
-       await api.post('/users', { 
+       const response = await api.post('/users', { 
         name,
         email,
         password
       })
+      console.log(response)
+      if(response.data.error){
+        return this.setState({error: response.data.error})
+      }
     } catch (error) {
       return window.alert('Ocorreu um erro!')      
     }
@@ -66,6 +71,7 @@ export default class Cadastro extends Component{
             onChange={e => this.setState({confirm: e.target.value})} 
             placeholder='Confirme sua senha'/>
             <button type="submit">Registrar</button>
+            <span><p>{this.state.error}</p></span>
           </form>
         </div>
       </>

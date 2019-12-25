@@ -5,8 +5,8 @@
   align-items: center;
   width: 300px;
   background-color: #0b46ebb6;
-  margin-top: 150px;
-  height: 250px;
+  margin-top: 105px;
+  height: 290px;
   border:1px solid #ddd;
   border-radius: 8px;
 }
@@ -33,10 +33,6 @@
 
 .cadastro span p {
   margin-top: 18px;
-  color: red;
+  color: #fff;
   font-size: 15px;
 }
-
-/* .cadastro button:focus{
-  color: blueviolet;
-} */
