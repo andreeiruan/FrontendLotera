@@ -63,6 +63,10 @@ export default class Resultados extends Component{
    }
 
  } 
+ redirecionarParaResultados(tipo){
+   console.log(this.props, tipo)
+  //  return this.props.history.push(`/concursos/${tipo}`)
+ }
  
   render(){
     return(
@@ -81,7 +85,9 @@ export default class Resultados extends Component{
         </div>
         <button onClick={e => this.mudarJogo('proximo')} className="btn">Proximo</button>
       </div>
-        <button onClick={ e => console.log('ola')} id="ver-mais">Ver mais</button>
+      <a href={`/concursos/${this.state.type}`} id='link-ver'>
+        <button id="ver-mais">Ver mais</button>
+      </a>
       </>
     )
   }

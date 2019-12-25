@@ -45,6 +45,13 @@ export default class Home extends Component{
     if(!jogo) return window.alert('Selecione um jogo!')
     return this.props.history.push(`/${jogo}`)
   }
+  formatarHora(data) {
+    const dt = new Date(data)
+    let string = dt.toLocaleTimeString()
+    string = string.split(':')
+    const [hora, minutos] = string
+    return `${hora}:${minutos}`
+  }
   
   async getGames(id){
     const responseLoto = await api.get(`/games/${id}/1`)
@@ -59,7 +66,7 @@ export default class Home extends Component{
       if(responseLoto.data.contest){
         const dataConcursoLoto = new Date(responseLoto.data.contest.date)
         this.setState({ dataLoto: dataConcursoLoto.toLocaleDateString()})
-        this.setState({ horaLoto: dataConcursoLoto.toLocaleTimeString()})
+        this.setState({ horaLoto: this.formatarHora(dataConcursoLoto)})
       }
     }
 
@@ -71,7 +78,7 @@ export default class Home extends Component{
       if(responseMega.data.contest){
         const dataConcursoMega = new Date(responseMega.data.contest.date)
         this.setState({ dataMega: dataConcursoMega.toLocaleDateString()})
-        this.setState({ horaMega: dataConcursoMega.toLocaleTimeString() })      
+        this.setState({ horaMega: this.formatarHora(dataConcursoMega) })      
       }
     }
     
@@ -83,7 +90,7 @@ export default class Home extends Component{
       if(responseQuina.data.contest){
         const dataConcursoQuina = new Date(responseQuina.data.contest.date)
         this.setState({ dataQuina: dataConcursoQuina.toLocaleDateString()})
-        this.setState({ horaQuina: dataConcursoQuina.toLocaleTimeString() })
+        this.setState({ horaQuina: this.formatarHora(dataConcursoQuina) })
       }
     }
   }

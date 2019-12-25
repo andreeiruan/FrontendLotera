@@ -53,9 +53,13 @@
 .info-concurso p{
   margin: 5px;
 }
-#ver-mais{
+#link-ver{
   margin-top: -30px;
+}
+#ver-mais{
+  margin-top: -80px;
   width: 150px;
+  height: 20px;
   color: #fff;
   border-radius: 8px;
   background: rgb(235, 143, 81);

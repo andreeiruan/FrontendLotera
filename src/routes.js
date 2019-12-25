@@ -7,9 +7,10 @@ import Home from './pages/Home'
 import Lotofacil from './pages/Lotofacil'
 import MegaSena from './pages/Megasena'
 import Quina from './pages/Quina'
+import JogosUsuario from './pages/JogosUsuario'
+import Concursos from './pages/Concursos'
 
 import PrivateRoute from './PrivateRoute'
-import JogosUsuario from './pages/JogosUsuario'
 
 export default () => {
   return (
@@ -21,7 +22,8 @@ export default () => {
         <PrivateRoute path='/lotofacil' component={Lotofacil}/>
         <PrivateRoute path='/megasena' component={MegaSena}/>        
         <PrivateRoute path='/quina' component={Quina}/>  
-        <PrivateRoute path='/jogos/:tipo' component={JogosUsuario}/>      
+        <PrivateRoute path='/jogos/:tipo' component={JogosUsuario}/>     
+        <PrivateRoute path='/concursos/:tipo' component={Concursos}/>      
         <PrivateRoute component={Home}/>
       </Switch>
     </BrowserRouter>
