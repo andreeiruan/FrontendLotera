@@ -10,7 +10,8 @@ export default class Concursos extends Component{
     this.state = {
       tipo: this.props.match.params.tipo,
       titulo: '',
-      concursos: []
+      concursos: [],
+      classe: ''
     }
   }
   componentDidMount(){
@@ -49,24 +50,28 @@ export default class Concursos extends Component{
     return (
       <>  
         <Menu />
-        <h1>Concursos da {this.state.titulo}</h1>
-        <div className="container-concursos">
-          <ul>
-            {this.state.concursos.map(conc => (
-              <li key={conc.id}>
-                <section>
-                  <p>Concurso {conc.id}</p>
-                  <p>Data do Concurso: {this.formatarData(conc.date)}</p>
-                  <p>Hora do concurso: {this.formatarHora(conc.date)}</p>
-                  {conc.accomplished ? (
-                  <p>{conc.results[0].result}</p>
-                  ) : (
-                    <p>Concurso não realizado</p>
-                  )}
-                </section>
-              </li>
-            ))}
-          </ul>
+        <div className={`concursos ${this.state.classe}`}>
+          <h1>Concursos da {this.state.titulo}</h1>
+          <div className="container-concursos">
+            <ul>
+              {this.state.concursos.map(conc => (
+                <li key={conc.id}>
+                  <section>
+                    <h3>Concurso {conc.id}</h3>
+                    {conc.accomplished ? (
+                      <div className="resultado">{conc.results[0].result.split('-').map(num => (
+                        <button key={num}>{num}</button>
+                        ))}
+                        </div>) : (
+                          <p id="not">Concurso não realizado</p>
+                          )}
+                    <p>Data do Concurso: {this.formatarData(conc.date)}</p>
+                    <p>Hora do concurso: {this.formatarHora(conc.date)}</p>
+                  </section>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </>
     )

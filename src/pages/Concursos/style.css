@@ -1,0 +1,70 @@
+.concursos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 25px;
+}
+.container-concursos ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  max-width: 1000px;
+  flex-wrap: wrap;
+} 
+.container-concursos ul li{
+  list-style: none;
+  min-width: 300px;
+  min-height: 150px;
+  max-height: 150px;
+  margin: 10px;
+  max-width: 300px;
+  background: #fff;
+  box-shadow: 2px 3px 5px #000;
+  border-radius: 15px;
+}
+.container-concursos ul li section p{
+  text-align: center;
+}
+.container-concursos ul li section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loto .container-concursos ul li section h3{
+  margin-top: 5px;
+}
+.container-concursos ul li section h3{
+  color: #fff;
+  text-align: center;
+  margin-top: -10px;
+  /* width: 98%; */
+  border-radius: 7px;
+}
+.container-concursos ul li section .resultado{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 250px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.mega .container-concursos ul li section .resultado{
+  margin-bottom: 30px;
+}
+.container-concursos ul li section .resultado button{
+  width: 25px;
+  height: 25px;
+  border-radius: 18px;
+  color: #fff;
+  border: none;
+  margin: 3px;
+}
+#not{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
