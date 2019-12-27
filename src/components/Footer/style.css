@@ -1,6 +1,8 @@
 .fim{
-  margin-top: 110px;
-  bottom: -100px;
+  display: fixed;
+  /* position: absolute; */
+  /* margin-top: 110px; */
+  bottom: -0;
   left: 0;
   width: 100%;
 }
@@ -26,4 +28,18 @@
 .redes a{
   text-decoration: none;
   color: #fff;
+}
+@media(max-width: 414px){
+  .fim .rodape{
+    height: 45px;
+  }
+  .fim .rodape span{
+    font-size: 12px;
+    margin-right: 2%;
+  }
+  .fim .rodape .redes{
+    width: 60px;
+    margin-right: 0;
+    height: 20px;
+  }
 }

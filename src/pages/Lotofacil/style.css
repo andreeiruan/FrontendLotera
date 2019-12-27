@@ -74,3 +74,19 @@
 .escolha-loto li a{
   text-decoration: none;
 }
+@media(max-width: 1024px){
+  .es-loto{
+    width: 100%;
+  }
+}
+@media(max-width: 414px){
+  .es-loto h1{
+    height: 40px;
+  }
+  .es-loto form .escolhidos{
+    width: 80%;
+  }
+  .es-loto form hr{
+    width: 100%;
+  }
+}

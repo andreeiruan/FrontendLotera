@@ -6,7 +6,7 @@
   width: 300px;
   background-color: #0b46ebb6;
   margin-top: 105px;
-  height: 290px;
+  min-height: 290px;
   border:1px solid #ddd;
   border-radius: 8px;
 }

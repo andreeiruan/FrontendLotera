@@ -61,3 +61,30 @@
 .escolha-quina .selecionado-quina:hover{
   background: rgba(73, 116, 117, 0.5);
 }
+@media(max-width: 1024px) {
+  .es-quina {
+    width: 100%;
+  }
+  .es-quina h1{
+    height: 40px;
+  }
+}
+@media(max-width: 375px){
+  .es-quina form .escolha-quina li button{
+    width: 33px;
+    height: 33px;
+  }
+}
+
+@media(max-width: 414px) {
+  .es-quina form .escolha-quina{
+    width: 100%;
+  }
+  .es-quina form .escolhidos {
+    width: 80%;
+  }
+
+  .es-quina form hr {
+    width: 100%;
+  }
+}

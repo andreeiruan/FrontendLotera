@@ -22,12 +22,11 @@ html, body, #root{
 }
 .escolhidos {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   margin-top: 10px;
-  /* margin-left: -35px; */
-  /* width: 500px; */
   overflow: hidden;
-  /* margin-left: 6rem; */
 }
 
 .escolhidos li {

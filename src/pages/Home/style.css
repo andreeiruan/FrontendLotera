@@ -81,3 +81,79 @@ min-height: 900px;
   text-align: center;
   color: #fff;
 }
+@media(max-width: 768px){
+  .home-usuario{
+    width: 100%;
+  }
+  .home-usuario .cabecalho .selecao-jogo .resultados{
+    width: 100%;
+  }
+  .home-usuario .ultimas-apostas{
+    width: 100%;
+    overflow: hidden;
+  }
+  .home-usuario .ultimas-apostas .jogos{
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media(max-width: 414px){
+  .home-usuario .cabecalho .ola{
+    font-size: 20px;
+  }
+  .home-usuario .cabecalho .selecao-jogo .resultados .info-concurso {
+    width: 100%;
+  }
+
+  .home-usuario .cabecalho .selecao-jogo .resultados .info-concurso ul {
+    width: 80%;
+  }
+
+  .home-usuario .cabecalho .selecao-jogo .resultados .info-concurso ul li {
+    padding: 5px;
+  }
+
+  .home-usuario .cabecalho .selecao-jogo .resultados .info-concurso ul li button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .home-usuario .cabecalho .selecao-jogo .resultados .btn {
+    font-size: 14px;
+  }
+}
+@media(max-width: 375px){
+  .home-usuario .cabecalho .selecao-jogo .resultados .info-concurso{
+    width: 100%;
+  }
+  .home-usuario .cabecalho .selecao-jogo .resultados .info-concurso ul{
+    width: 80%;
+  }
+  .home-usuario .cabecalho .selecao-jogo .resultados .info-concurso ul li{
+    padding: 5px;
+  }
+  .home-usuario .cabecalho .selecao-jogo .resultados .info-concurso ul li button{
+    width: 35px;
+    height: 35px;
+  }
+  .home-usuario .cabecalho .selecao-jogo .resultados .btn{
+    font-size: 10px;
+  }
+}
+@media(max-width: 320px){
+  .home-usuario .cabecalho .selecao-jogo .resultados .info-concurso ul{
+    width: 80%;
+  }
+  .home-usuario .cabecalho .selecao-jogo .resultados .info-concurso ul li{
+    padding: 3px;
+  }
+  .home-usuario .cabecalho .selecao-jogo .resultados .info-concurso ul li button{
+    width: 30px;
+    height: 30px;
+  }
+  .home-usuario .cabecalho .selecao-jogo .resultados .info-concurso p{
+    font-size: 12px;
+  }
+}

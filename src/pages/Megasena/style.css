@@ -62,3 +62,39 @@
 .escolha-mega .selecionado-mega:hover{
   background: rgba(73, 116, 117, 0.5);  
 }
+
+@media(max-width: 414px) {
+  .es-mega{
+    width: 100%;
+  }
+  .es-mega h1{
+    height: 40px;
+  }
+  .es-mega form .escolha-mega{
+    width: 100%;
+  }
+  .es-mega form .escolha-mega li button{
+    width: 35px;
+    height: 35px;
+  }
+  .es-mega form .escolhidos {
+    width: 80%;
+  }
+
+  .es-mega form hr {
+    width: 100%;
+  }
+}
+@media(max-width: 375px){
+  .es-mega form .escolha-mega li button {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media(max-width: 320px){
+  .es-mega form .escolha-mega li button {
+    width: 28px;
+    height: 28px;
+  }
+}
