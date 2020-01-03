@@ -1,3 +1,6 @@
+.home-usuario{
+  width: 100%;
+}
 .home-usuario .cabecalho{
 display: flex;
 flex-direction: column;
