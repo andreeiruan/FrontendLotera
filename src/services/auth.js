@@ -1,4 +1,3 @@
-
 export const TOKEN_KEY = ''
 export const isAuthenticated = () => getToken() !== undefined
 export const getToken = () => {
