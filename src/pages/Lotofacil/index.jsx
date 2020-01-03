@@ -34,7 +34,9 @@ export default class Lotofacil extends React.Component{
       nums
     })
 
-    return this.props.history.push('/home')
+    window.alert('Aposta feita com sucesso, Boa Sorte!!')
+    this.setState({ numeros: [], contest: undefined })
+    this.setBackground(this.state.numeros)
   }
 
   setBackground(numeros) {
